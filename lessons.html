@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+		<!--<title> Responsive Sidebar Menu </title>-->
+		<link rel="stylesheet" href="style-3.css" href='https://fonts.googleapis.com/icon?family=Material+icons'>
+		<!-- Boxicons CDN Link -->
+		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		<div class="sidebar">
+			<div class="logo_content">
+				<div class="logo">
+					<div class="logo_name">
+						<img src="logo-1.png"></img>
+					</div>
+				</div>
+			</div>
+			<ul class="nav_list">
+				<li>
+					<a href="students.html">
+						<i class='bx bx-user' ></i>
+						<span class="links_name">Students</span>
+					</a>
+					<span class="tooltip">Students</span>
+				</li>
+	  
+				<li>
+					<a href="lessons.html">
+						<i class='bx bxs-book'></i>
+						<span class="links_name">Lesson Plan</span>
+					</a>
+					<span class="tooltip">Lessons Plan</span>
+				</li>
+	  
+				<li>
+					<a href="settings.html">
+						<i class='bx bx-cog' ></i>
+						<span class="links_name">Settings</span>
+					</a>
+					<span class="tooltip">Settings</span>
+				</li>
+			</ul>
+		</div>
+		<div class="home_content">
+			<div class="text">AINE AI</div>
+				<ul>
+					<li>
+						<a href="#"><i class='bx bx-video'></i>
+							<span class="links_name"></span>
+						</a>
+						<span class="tooltip">Videos</span>
+					</li>
+				</ul>
+				<div class="boxContainer">
+					<table class="elementsContainer">
+						<tr>
+						    <td><input type="text" placeholder="Insert URL Here" class="search">
+					        <td><a href="#"><i class="material-icons"></i></a></td>
+						</tr>
+					</table>
+				</div>
+		</div>
+
+  <script>
+   let btn = document.querySelector("#btn");
+   let sidebar = document.querySelector(".sidebar");
+   let searchBtn = document.querySelector(".bx-search");
+
+   btn.onclick = function() {
+     sidebar.classList.toggle("active");
+     if(btn.classList.contains("bx-menu")){
+       btn.classList.replace("bx-menu" , "bx-menu-alt-right");
+     }else{
+       btn.classList.replace("bx-menu-alt-right", "bx-menu");
+     }
+   }
+   searchBtn.onclick = function() {
+     sidebar.classList.toggle("active");
+   }
+  </script>
+    
+  </body>
+</html>
+
